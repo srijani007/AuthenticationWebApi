@@ -1,4 +1,5 @@
 using AuthenticationWebApi.Services;
+using AuthorApi.Services;
 using CommonSpace.DatabaseEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -27,6 +28,7 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
 
 builder.Services.AddDbContext<LibraryContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddTransient<IAuthenticationServices, AuthenticationServices>();
+builder.Services.AddTransient<IAuthorServices, AuthorServices>();
 
 
 var app = builder.Build();

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderApi", "..\ReaderApi\R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookApi", "..\WebApplication1\BookApi.csproj", "{C41AF01B-E308-4B02-88F7-44E3333DA5D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGateway", "..\OcelotGateway\OcelotGateway.csproj", "{545E134B-865E-4650-B116-67ADDC3D41F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C41AF01B-E308-4B02-88F7-44E3333DA5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C41AF01B-E308-4B02-88F7-44E3333DA5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C41AF01B-E308-4B02-88F7-44E3333DA5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545E134B-865E-4650-B116-67ADDC3D41F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545E134B-865E-4650-B116-67ADDC3D41F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545E134B-865E-4650-B116-67ADDC3D41F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545E134B-865E-4650-B116-67ADDC3D41F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

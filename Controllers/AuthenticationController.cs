@@ -16,18 +16,20 @@ namespace AuthenticationWebApi.Controllers
     {
         private readonly IAuthenticationServices _authenticationServices;
         private readonly IConfiguration _configuration;
-        public AuthenticationController(IConfiguration configuration, IAuthenticationServices authenticationServices)
+        private readonly IAuthorServices _authorServices;
+        public AuthenticationController(IConfiguration configuration, IAuthenticationServices authenticationServices, IAuthorServices authorServices)
         {
             this._configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             _authenticationServices = authenticationServices;//?? throw new ArgumentNullException(nameof(authenticationServices));
+            _authorServices = authorServices;
         }
 
         [HttpPost]
-        public ActionResult<string> Validate(Creds usercreds)
+        public ActionResult <string> Validate(Creds usercreds)
         {
             try
             {
-                if (_authenticationServices.validateuser(usercreds))
+                if (_authorServices.Signin(usercreds) != null)
                 {
                     var Token = _authenticationServices.BuildToken(_configuration["Jwt:Key"],
                                                     _configuration["Jwt:Issuer"],
